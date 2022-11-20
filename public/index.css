@@ -1,0 +1,379 @@
+* {
+  padding:0;
+  margin:0;
+  border:0;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes titleanimation {
+  0%   {color:black; }
+  25%  {color:white; }
+  50%  {color:black; }
+  75%  {color:white; }
+  100% {color:black; }
+}
+
+@keyframes colorful {
+  0%   {color:rgba(255, 192, 203, 0.812); }
+  25%  {color:rgb(37, 230, 37); }
+  50%  {color:orange; }
+  75%  {color:rgb(235, 94, 94); }
+  100% {color:rgb(116, 116, 200); }
+}
+
+@keyframes wiggle {
+  0%   {left: 0px; }
+  25%  {left: -60px; }
+  50%  {left: 0px; }
+  75%  {left: 60px; }
+  100% {left: 0px; }
+}
+
+@keyframes vibrate {
+  0%   {top: -505px; }
+  25%  {top: -500px; }
+  50%  {top: -510px; }
+  75%  {top: -500px; }
+  100% {top: -505px; }
+}
+
+@keyframes grin {
+  0%   {right: -71%; }
+  25%  {right: -70%; }
+  50%  {right: -71%; }
+  75%  {right: -70%; }
+  100% {right: -71%; }
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: "Gloria Hallelujah";
+  position:relative;
+  margin:10px;
+  color:white;
+  animation-name: titleanimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition:2s;
+}
+
+#hysterical {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:max-content;
+  position: relative;
+  top:900px;
+  padding-bottom:400px;
+  display:flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+#hysterical-image {
+  width:200px;
+  position: relative;
+  color:blue;
+  padding:10px 50px;
+  left: -100px;
+}
+
+#hbd {
+  font-family: "Gloria Hallelujah";
+  font-size: 7rem;
+  position:relative;
+  top:200px;
+  float:right;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+#happy {
+  font-size: 7rem;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: transparent;
+  animation-name: colorful;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  text-shadow: 2px 2px 1px black;
+}
+
+#bday {
+  font-size: 8rem;
+  padding-top: 70px;
+  margin: 0;
+  background-color: transparent;
+  position:absolute;
+  animation-name:colorful;
+  animation-duration: 0.5s;
+  text-shadow: 2px 2px 1px black;
+  animation-iteration-count: infinite;
+}
+
+#wiggle {
+  padding-top: 350px;
+  position: relative;
+  top:4000px;
+  bottom:0;
+  z-index:8;
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wiggle-image {
+  width: 200px;
+  position:relative;
+  bottom:0;
+  background-color:transparent;
+  z-index:7;
+  background-color: transparent;
+}
+
+#wiggle-image1{
+  animation-name: wiggle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+#wiggle-image2{
+  transform: scaleX(-1);
+  animation-name: wiggle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#wiggle-image3{
+  animation-name: wiggle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#wiggle-image4{
+  transform: scaleX(-1);
+  animation-name: wiggle;
+  animation-duration: 2.7s;
+  animation-iteration-count: infinite;
+}
+
+#wiggle-image5{
+  animation-name: wiggle;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+}
+
+#wiggle-image6{
+  transform: scaleX(-1);
+  animation-name: wiggle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+#all {
+  position: relative;
+  top:1400px;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  z-index:9;
+  background-color: transparent;
+}
+
+
+#scream {
+  position: relative;
+  width :500px;
+  left: 10%;
+  transform: rotate(350deg);
+  background-color: transparent;
+}
+
+#grin {
+  width:500px;
+  transform: scaleX(-1);
+  position: relative;
+  top:-40px;
+  right:-70%;
+  animation-name: grin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+}
+
+#happycry {
+  position: relative;
+  width:600px;
+  top:-500px;
+  left: -40px;
+  transform: rotate(350deg);
+  animation-name: vibrate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+}
+
+#toby {
+  width: 500px;
+  position:relative;
+  transform: rotate(270deg);
+  left:0;
+  top:-500px;
+  animation-name: vibrate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+  padding-bottom: 200px;
+}
+
+#smily {
+  width: 400px;
+  position: relative;
+  transform: scaleX(-1);
+  right:-70%;
+  top:-500px;
+  animation-name: vibrate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+}
+
+h2 {
+  font-size: 7rem;
+  font-family: "Gloria Hallelujah";
+  width:100px;
+  top:-400px;
+  animation-name: colorful;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+}
+
+#i1{
+  position: relative;
+  left: 50%;
+}
+
+#i2{
+  position: relative;
+  left: 50%;
+}
+
+#i3{
+  position: relative;
+  left: 50%;
+}
+
+#i4{
+  position: relative;
+  left: 50%;
+}
+
+#letter {
+  position: relative;
+  width:200px;
+  animation-name: letter;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+  z-index:8;
+  background-color: transparent;
+}
+
+#paper-container {
+  position:fixed;
+  width:fit-content;
+  height: fit-content;
+  z-index: 10;
+  
+}
+
+#paper {
+  position: fixed;
+  width: 500px;
+  inset:0;
+  z-index:10;
+  background-color: transparent;
+  right: 50%;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0) rotate(350deg);
+}
+
+#fuckyou {
+  display: none;
+  position: fixed;
+  width: 500px;
+  inset:0;
+  z-index:10;
+  background-color: transparent;
+  right: 50%;
+  left: calc(50% - 20px);
+  top: calc(10% + 30px);
+  transform: translate(-50%, 0) rotate(350deg);
+}
+
+#writing {
+  color:black;
+  background-color: transparent;
+  position: fixed;
+  width: 330px;
+  inset:0;
+  z-index:10;
+  background-color: transparent;
+  right: 50%;
+  left: 50%;
+  top: calc(10% + 50px);
+  transform: translate(-50%, 0) rotate(350deg);
+
+  font-family: "Gloria Hallelujah";
+}
+
+#mwah {
+  background-color: transparent;
+  word-break: break-all;
+  hyphens:auto;
+  font-size: 1.5rem;
+}
+
+#overlay {
+  background-color: rgba(66, 61, 61, 0.735);
+  width:100vw;
+  height: 100vh;
+  position:fixed;
+  inset: 0;
+  z-index: 9;
+}
+
+@keyframes letter {
+  0%   { left: 0%; top: -5%;}
+  25%  { left:85% ; transform: rotate(30deg); top: -5%}
+  50%  { left: 0% ; top: -30%;}
+  75%  { left: 85%; transform: rotate(350deg); top:-20%;}
+  100% { left: 0% ; top:-5%;}
+}
